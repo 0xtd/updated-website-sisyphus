@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  // { name: "Home", href: "/", current: true },
   { name: "Services", href: "/services/", current: false },
   { name: "About", href: "/about/", current: false },
   { name: "Contact", href: "/contact/", current: false },
@@ -17,7 +17,7 @@ const NavBar = () => {
   const routerPath = usePathname();
 
   return (
-    <div className="bg-secondary border-b sticky top-0 z-[10000]">
+    <div className="bg-secondary sticky top-0 z-[10000]">
       <Disclosure as="nav" className="mx-auto py-4 px-6 container">
         {({ open }) => (
           <>
