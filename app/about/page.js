@@ -16,7 +16,7 @@ const About = () => {
       <main>
         <HeroSection />
         <OurMissionAndVisionSection />
-        <OurTeamSection />
+        {/* <OurTeamSection /> */}
         <AchievementSection />
       </main>
     </>
