@@ -3,6 +3,8 @@ import NavBar from "../components/Header/NavBar";
 import "./globals.css";
 import { Poppins, Josefin_Sans } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +31,8 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         {children}
+        <Analytics />
+        <SpeedInsights />
         <Toaster position="bottom-center" reverseOrder={false} />
         <Footer />
       </body>
