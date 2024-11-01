@@ -45,7 +45,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary p-8 mt-14">
+    <footer className="bg-zinc-800 p-8 mt-14">
       <div className="container m-auto md:flex justify-between items-start">
         {/* useful links */}
         <div>

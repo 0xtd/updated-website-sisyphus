@@ -31,9 +31,9 @@ const HeroSection = () => {
       </div>
       <br />
       <br />
-      <div className="flex justify-center items-center md:justify-start">
+      {/* <div className="flex justify-center items-center md:justify-start">
         <CallToActionButton btnText="Contact" />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -6,19 +6,20 @@ import { AiOutlineCloseCircle, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import NavButton from "../NavButton";
 
 const navigation = [
   // { name: "Home", href: "/", current: true },
   { name: "Services", href: "/services/", current: false },
   { name: "About", href: "/about/", current: false },
-  { name: "Contact", href: "/contact/", current: false },
+  // { name: "Contact", href: "/contact/", current: false },
 ];
 const NavBar = () => {
   const routerPath = usePathname();
 
   return (
-    <div className="bg-secondary sticky top-0 z-[10000]">
-      <Disclosure as="nav" className="mx-auto py-4 px-6 container">
+    <div className="bg-zinc-800 sticky top-0 z-[10000]">
+      <Disclosure as="nav" className="py-4 px-6">
         {({ open }) => (
           <>
             <div className="">
@@ -27,8 +28,8 @@ const NavBar = () => {
                 <Link href="/">
                   <Image
                     src="/assets/logo/sisyphus-logo.png"
-                    width={90}
-                    height={90}
+                    width={70}
+                    height={70}
                     alt="sisyphus infotech logo"
                   />
                 </Link>
@@ -53,7 +54,7 @@ const NavBar = () => {
                   </Disclosure.Button>
                 </div>
                 {/* desktop menu items  */}
-                <div className="hidden md:flex space-x-6">
+                <div className="hidden md:flex flex-row items-center space-x-6">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
@@ -61,7 +62,7 @@ const NavBar = () => {
                       className={`${
                         routerPath === item.href
                           ? "text-callToAction"
-                          : "text-white hover:bg-callToAction"
+                          : "hover:bg-white hover:text-black"
                       } px-3 py-2 rounded-md text-sm font-medium`}
                       aria-current={item.current ? "page" : undefined}
                     >
@@ -69,6 +70,9 @@ const NavBar = () => {
                     </Link>
                   ))}
                 </div>
+                <Link href="/contact/" target="_blank">
+                  <NavButton btnText="Get Started" />
+                </Link>
               </div>
               {/* mobile menu items */}
               <Disclosure.Panel className="p-6 space-y-2 md:hidden">
