@@ -28,8 +28,8 @@ const NavBar = () => {
                 <Link href="/">
                   <Image
                     src="/assets/logo/sisyphus-logo.png"
-                    width={70}
-                    height={70}
+                    width={90}
+                    height={90}
                     alt="sisyphus infotech logo"
                   />
                 </Link>
